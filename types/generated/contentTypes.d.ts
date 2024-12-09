@@ -538,6 +538,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
 export interface ApiMenuMenu extends Struct.CollectionTypeSchema {
   collectionName: 'menus';
   info: {
+    description: '';
     displayName: 'menu';
     pluralName: 'menus';
     singularName: 'menu';
@@ -551,6 +552,8 @@ export interface ApiMenuMenu extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.String;
+    featured: Schema.Attribute.Boolean;
+    image: Schema.Attribute.Media<'images' | 'files'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::menu.menu'> &
       Schema.Attribute.Private;
