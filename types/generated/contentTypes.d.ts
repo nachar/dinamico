@@ -560,6 +560,9 @@ export interface ApiMenuMenu extends Struct.CollectionTypeSchema {
     price: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
+    type: Schema.Attribute.Enumeration<
+      ['Desayunos & Onces', 'Almuerzos', 'Para picar', 'Cremas & Sopas']
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

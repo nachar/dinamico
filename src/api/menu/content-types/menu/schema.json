@@ -35,6 +35,15 @@
     },
     "featured": {
       "type": "boolean"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Desayunos & Onces",
+        "Almuerzos",
+        "Para picar",
+        "Cremas & Sopas"
+      ]
     }
   }
 }
